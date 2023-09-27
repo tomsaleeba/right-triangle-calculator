@@ -1,0 +1,25 @@
+<html>
+  <img src="./right-triangle.png" style="width: 80px;">
+  <form>
+    <label style="display: block;">
+      a:
+      <input id="a" type="text" />
+    </label>
+    <label style="display: block;">
+      b:
+      <input id="b" type="text" />
+    </label>
+    <button type="button" id="theButton">Blah</button>
+    <p>result=<span id="theResult">(nothing yet)</span></p>
+  </form>
+  <script>
+    const theButton = document.querySelector('#theButton')
+    theButton.addEventListener('click', (event) => {
+      const aVal = parseInt(document.querySelector('#a').value)
+      const bVal = parseInt(document.querySelector('#b').value)
+      console.log(aVal + bVal)
+      const theSpan = document.querySelector('#theResult')
+      theSpan.textContent = aVal + bVal
+    })
+  </script>
+</html>
